@@ -5,9 +5,8 @@ const socketIo = require('socket.io');
 
 const app = express();
 const server = http.createServer(app);
-const io = socketIo(server); // Tạo một instance của Socket.IO
+const io = socketIo(server);
 
-// Xử lý sự kiện kết nối từ client
 io.on('connection', (socket) => {
   console.log('New client connected');
 
